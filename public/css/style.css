@@ -107,6 +107,10 @@ header .form-control {
     margin-top: 70px;
 }
 
+.ms-12 {
+    margin-right: 120px;
+}
+
 .container .dashboard-canvas {
     max-height: 400px;
     max-width: 80%;
@@ -133,13 +137,23 @@ header .form-control {
         top: 5rem;
     }
 
-    header a img{
+    header a img, .res-img{
         width: 110px;
     }
 
     .res-image{
         width: 10px;
     }
+}
+/* navbar */
+.res-img{
+    width: 50px;
+    height: 50px;
+
+}
+
+.bg-blue{
+    background-color: #404E67;
 }
 
 .res-image{
@@ -157,22 +171,45 @@ header .form-control {
     color: #333;
 }
 
-.sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #727272;
+.borleft{
+    border-left: 3px solid #FE8A7D;
 }
 
-.sidebar .nav-link.active {
-    color: #2470dc;
-}
+/* .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #8b8b8b;
+} */
+
+/* .sidebar .nav-link.active {
+    color: #A15252;
+} */
+
+
 
 .sidebar .nav-link:hover .feather,
 .sidebar .nav-link.active .feather {
-    color: inherit;
+    color: #fff;
+}
+
+
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: #fff;
 }
 
 .sidebar-heading {
     font-size: .75rem;
+}
+
+.container-fluid .row nav .sidebar-sticky ul li a {
+    padding: 12px;
+    color: #8b8b8b;
+}
+
+.container-fluid .row nav .sidebar-sticky ul li a:hover {
+    padding: 12px;
+    color: #fff;
 }
 
 /*
@@ -182,8 +219,6 @@ header .form-control {
 .navbar-brand {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
 }
 
 .navbar .navbar-toggler {
@@ -205,9 +240,7 @@ header .form-control {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
-.container-fluid .row nav .sidebar-sticky ul li a{
-    padding: 12px;
-}
+
 
 .w-1{
     height: 30px;

@@ -9,40 +9,60 @@
       </div>
 
 
-      <div class="row g-3 text-light">
+      <div class="row mb-3 g-3">
 
-        <div class="col-lg-4">
-          <div class="bg-success p-4 rounded">
-            <div class="fw-semibold fs-4">Pinjaman</div>
-              <div class="fs-4">
-                @currency($pinjaman)
-              </div>
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-secondary p-3 text-light">
+            <div class="card-block">
+                <div class="row align-items-end">
+                  <div class="col-8">
+                    <h6 class="fs-6 m-b-0">Total Pinjaman</h6>
+                    <div class="fs-5">@currency($pinjaman)</div>
+                    
+                    </div>
+                    <div class="col-4 text-right">
+                      <img src="img/pinjaman.png" class="res-image" alt="">
+                    </div>
+                </div>
             </div>
-              <div class="mt-2"></div>
         </div>
-
-        <div class="col-lg-4">
-            <div class="bg-warning p-4 rounded">
-              <div class="fw-semibold fs-4">Angsuran</div>
-              <div class="fs-4">
-                  @currency($total_piutang)
-              </div>
-            </div>
-              <div class="mt-2"></div>
-          </div>
-        
-        <div class="col-lg-4">
-          <div class="bg-warning p-4 rounded">
-            <div class="fw-semibold fs-4">Simpanan</div>
-              <div class="fs-4">
-                  @currency($total_simpanan)
-              </div>
-            </div>
-              <div class="mt-2"></div>
-        </div>
-
       </div>
-      
+
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-secondary p-3 text-light">
+            <div class="card-block">
+                <div class="row align-items-end">
+                  <div class="col-8">
+                    <h6 class="fs-6 m-b-0">Total Simpanan</h6>
+                    <div class="fs-5">@currency($total_simpanan)</div>
+                    
+                    </div>
+                    <div class="col-4 text-right">
+                      <img src="img/wallet.png" class="res-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6">
+        <div class="card bg-secondary p-3 text-light">
+            <div class="card-block">
+                <div class="row align-items-end">
+                  <div class="col-8">
+                    <h6 class="fs-6 m-b-0">Sisa Angsuran</h6>
+                    <div class="fs-5">@currency($total_piutang)</div>
+                    
+                    </div>
+                    <div class="col-4 text-right">
+                      <img src="img/pay.png" class="res-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
     
     </div>
 

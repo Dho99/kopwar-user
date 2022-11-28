@@ -36,21 +36,27 @@ class AkunController extends Controller
             'title' => 'Edit',
             'users' => $users,
 
+
         ]);
     }
 
+
     public function update(Request $request)
     {
+        // $request->file('image')->store('profile');
+
         $users = User::where('anggota_id', auth()->user()->anggota_id)
             ->update([
                 'username' => $request->username,
-                'password' => base64_encode(base64_encode(base64_encode($request->password)))
+                'password' => base64_encode(base64_encode(base64_encode($request->password))),
+                'image' => $request->file('image')->store('profile')
             ]);
+
         $request->validate([
             'username' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'image' => 'image|file|max:2048'
         ]);
-
         return redirect()->route('tampil');
     }
 }

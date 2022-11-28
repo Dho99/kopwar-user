@@ -1,27 +1,11 @@
 @extends('layouts/main')
 
-@section('container')
+<div class="container bg-blue mt-5">
     
-<div class="row justify-content-center mt-5">
-    <div class="col-md-5 mt-5">
-        
-        @if (session()->has('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        @endif
-        
-        @if (session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ session('loginError') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        @endif
-        
-        <main class="form-signin">
-            <h1 class="h3 mb-4 fw-normal text-center mt-5">Please Log in</h1>
-            <form action="/login" method="post">
+    <main class="align-items-center mt-3 p-5">
+        <div class="text-center fs-1 mb-4 fw-semibold">Log in</div>
+        <div class="container">
+             <form action="/login" method="post">
                 @csrf
                 <div class="form-floating">
                     <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Username" required autofocus value="{{ old('username') }}">
@@ -45,11 +29,7 @@
                 </div> --}}
 
             </form>
+        </div>
 
-            <small class="d-block text-center mt-3">Not registered? <a href="/register">Register Now</a></small>
-        </main>
-
-    </div>
+    </main>
 </div>
-
-@endsection
