@@ -10,6 +10,7 @@
     {{-- <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'> --}}
     {{-- Vanilla --}}
     <link rel="stylesheet" href="/css/style.css">
+    {{-- <link rel="stylesheet" href="/css/signin.css"> --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 

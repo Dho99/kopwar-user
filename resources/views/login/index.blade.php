@@ -1,35 +1,52 @@
-@extends('layouts/main')
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Koperasi INTENS | {{ $title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-<div class="container bg-blue mt-5">
+  </head>
+  <body class="text-center bg-secondary">
     
-    <main class="align-items-center mt-3 p-5">
-        <div class="text-center fs-1 mb-4 fw-semibold">Log in</div>
-        <div class="container">
-             <form action="/login" method="post">
-                @csrf
-                <div class="form-floating">
-                    <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Username" required autofocus value="{{ old('username') }}">
-                    <label for="username">Username</label>
-                    @error('username')
-                        <div class="invalid-feedback mb-2">
-                            {{ $message }}
-                        </div>
-                    @enderror
-                </div>
+<main class="form-signin m-auto w-100 bg-blue rounded-3">
+  <form class="m-4" action="/login" method="POST">
+    @csrf
+    <img class="mb-3 img-fluid" src="{{ asset('img/header_intens.png') }}" alt="">
+    <div class="fs-5 fw-normal mb-4 text-light">Please Log in</div>
 
-                <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-                <label for="password">Password</label>
-                </div>
-        
-                <button class="w-100 btn btn-lg btn-primary mt-2" type="submit">Log in</button>
-{{-- 
-                <div class="form-floating mt-2 d-flex justify-content-center">
-                  <input class="form-check-input" type="checkbox" name="remember" id="remember"><span class="ms-2">Remember Me</span>
-                </div> --}}
-
-            </form>
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control @error('username') is-invalid @enderror" name="username"  value="{{ old('username') }}" autofocus required id="floatingInput" placeholder="Username">
+      <label for="floatingInput">Username</label>
+      
+    @error('username')
+        <div class="invalid-feedback text-start">
+          {{ $message }}
         </div>
+    @enderror
 
-    </main>
-</div>
+    </div>
+
+
+    <div class="form-floating">
+      <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    </div>
+    <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign in</button>
+  </form>
+
+  {{-- <div class="mb-3">
+    <small class="text-light">
+      Belum mempunyai Akun ? <a href="/register" class="text-light fw-bold">Daftar Sekarang</a>
+    </small>
+  </div> --}}
+</main>
+
+
+    
+  </body>
+</html>

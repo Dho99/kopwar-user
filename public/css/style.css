@@ -8,6 +8,9 @@ body {
     font-size: .875rem;
 }
 
+
+
+
 .feather {
     width: 16px;
     height: 16px;
@@ -99,13 +102,14 @@ header .form-control {
      -webkit-overflow-scrolling: touch;
  } */
 
+
+
+ 
+
 /*
  * Sidebar
  */
 
-.mt-6 {
-    margin-top: 70px;
-}
 
 .ms-12 {
     margin-right: 120px;
@@ -141,6 +145,12 @@ header .form-control {
         width: 110px;
     }
 
+    body main form img {
+        width: 180px;
+        height: 60px;
+    }
+
+
     .res-image{
         width: 10px;
     }
@@ -149,7 +159,6 @@ header .form-control {
 .res-img{
     width: 50px;
     height: 50px;
-
 }
 
 .bg-blue{

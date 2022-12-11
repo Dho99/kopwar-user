@@ -19,20 +19,19 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        $this->validate($request, [
-            'username' => 'required',
-            'password' => 'required'
-        ]);
-
+        $request->flashOnly(['username']);
+        
         $user = User::where('username', $request->username)->where('password', base64_encode(base64_encode(base64_encode($request->password))))->first();
-
+        
         if ($user) {
             Auth::login($user);
             $request->session()->regenerate();
 
             return redirect()->intended('/dashboard');
         } else {
-            return back()->with('LoginError', 'Login Failed!');
+            return back()->withErrors([
+                'username' => 'Masukkan Username dengan benar !'
+            ]);
         }
     }
 
